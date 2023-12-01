@@ -19,6 +19,11 @@ namespace Bridge
             if (_dictionary.ContainsKey(index))
             {
                 var dictionary = _dictionary[index];
+                int savedPower=dictionary.Power;
+                int savedMode=dictionary.Mode;
+
+                Power = savedPower;
+                Mode = savedMode;
                 implementor.SetPower(Power);
                 implementor.SetMode(Mode);
                 Console.WriteLine($"Загруженный режим: {index} (Мощность--> {Power} Канал--> {Mode})");

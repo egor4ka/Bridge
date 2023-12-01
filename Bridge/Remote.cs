@@ -9,8 +9,8 @@ namespace Bridge
     public class Remote
     {
         protected IRemoteImplementor implementor { get; private set; }
-        public int Power { get; set; }
-        public int Mode { get; set; }
+        public int Power { get; protected set; }
+        public int Mode { get; protected set; }
         public Remote(IRemoteImplementor implementor)
         {
             this.implementor = implementor;
